@@ -20,7 +20,7 @@ Siga os passos abaixo para configurar e rodar o projeto:
 Clone o repositório para sua máquina local:
 
 ```bash
-git clone https://github.com/seu-usuario/laravel-event-manager.git
+git clone [https://github.com/MarceloPalmeira/laravel-event-manager/)]
 cd laravel-event-manager
 ```
 
