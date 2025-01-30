@@ -1,186 +1,159 @@
-/* General */
+/* 🔹 Estilos Globais */
 * {
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #FFFFFF;
 }
 
 body {
+  background-color: #121212;
   min-height: 100vh;
   padding-bottom: 100px;
   position: relative;
 }
 
+/* 🔹 Header */
 header {
-  background-color: #FFF;
-  border-bottom: 1px solid #CCC;
+  display: flex;
+  background-color: #000;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.row {
-  margin: 0;
+.profile-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #fff;
 }
 
-.container-fluid {
-  padding: 0;
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
+nav a {
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 18px 15px;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
+
+/* 🔹 Botão */
+#download_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #3c3b3b;
+  box-shadow: 5px 5px 0px 0px #000;
+  width: 170px;
+  height: 60px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+#download_button:hover {
+  background: #333;
+  box-shadow: 5px 5px 0px 0px #222;
+  transform: scale(1.05);
+}
+
+/* 🔹 Botões e mensagens */
 .btn-primary {
   background-color: #F2A340;
   border: 2px solid #C28008;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
 .btn-primary:hover {
   background-color: #C28008;
-  border-color: #C28008;
+  transform: scale(1.05);
 }
 
 .msg {
-  background-color: #D4EDDA;
-  color: #155724;
-  border: 1px solid #C3E6CB;
-  width: 100%;
-  margin-bottom: 0;
+  background-color: #2E7D32;
+  border: 1px solid #4CAF50;
   text-align: center;
   padding: 10px;
+  border-radius: 5px;
 }
 
-#info-container .already-joined-msg {
-  margin: 15px 0;
-  color: #004085;
-  background-color: #CCE5FF;
-  border: 1px solid #B8DAFF;
-  padding: 10px;
-  width: 275px;
-}
-
-/* navbar */
-#navbar img {
-  width: 40px;
-}
-
-#navbar {
-  justify-content: space-between;
-  background-color: #FFF;
-  padding: 5px 0;
-}
-
-#navbar a {
-  font-size: 14px;
-  color: #757575;
-}
-
-#navbar a:hover {
-  color: #F2A340;
-}
-
-/* Search Container */
+/* 🔹 Banner */
 #search-container {
-  background-image: url("../img/banner.jpg");
-  background-size: cover;
-  background-position: center;
+  background: url("../img/banner.jpg") center/cover;
   height: 400px;
   padding: 50px;
   text-align: center;
+  filter: brightness(80%);
 }
 
-#search-container h1 {
-  color: #F2A340;
-  margin-bottom: 30px;
-  font-weight: 900;
-}
-
-#search-container form {
-  width: 50%;
-  margin: 0 auto;
-}
-
-/* Events list */
+/* 🔹 Eventos */
 #events-container {
   padding: 50px;
 }
 
-#events-container h2 {
-  margin-bottom: 10px;
-}
-
-#events-container .subtitle {
-  color: #757575;
-  margin-bottom: 30px;
-}
-
 #cards-container {
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-#events-container .card {
+.card {
+  background-color: #1E1E1E;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 15px;
   flex: 1 1 24%;
   max-width: 25%;
-  border-radius: 10px;
-  padding: 0;
-  margin: .5%;
+  transition: 0.3s;
 }
 
-#events-container img {
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(242, 163, 64, 0.5);
+}
+
+.card img {
   max-height: 150px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 10px;
 }
 
-.card .card-date {
+/* 🔹 Formulários */
+input, select, textarea {
   font-size: 12px;
-  color: #CCC;
+  background-color: #1E1E1E;
+  border: 1px solid #444;
+  padding: 8px;
+  border-radius: 5px;
 }
 
-.card .card-title {
-  color: #212121;
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 30px;
+input:focus, select:focus, textarea:focus {
+  border-color: #F2A340;
+  outline: none;
 }
 
-.card-participants {
-  font-size: 14px;
-  color: #757575;
-}
-
-/* Event create page */
-#event-create-container {
-  padding: 30px
-}
-
-#event-create-container label {
-  font-weight: bold;
-}
-
-#event-create-container input,
-#event-create-container select,
-#event-create-container textarea {
-  font-size: 12px;
-}
-
-/* Event page */
-#image-container,
-#info-container {
-  margin-top: 30px;
-}
-
+/* 🔹 Página de Evento */
 #image-container img {
   border-radius: 10px;
+  max-width: 100%;
 }
 
 #info-container h1 {
   font-size: 36px;
   font-weight: 900;
-}
-
-#info-container p {
-  margin: 0;
-  font-size: 14px;
-  display: flex;
-}
-
-#info-container h3,
-#description-container h3 {
-  font-size: 20px;
-  font-weight: bold;
 }
 
 #info-container ion-icon {
@@ -189,55 +162,58 @@ header {
   margin-right: 5px;
 }
 
-#info-container #event-submit {
-  margin: 20px 0;
-}
-
-#items-list {
-  list-style: none;
-  padding-left: 0;
-}
-
-#items-list li {
-  display: flex;
-}
-
-#description-container {
-  margin-top: 30px;
-}
-
-/* Dashboard */
+/* 🔹 Dashboard */
 .dashboard-title-container {
-  margin-bottom: 30px;
-  margin-top: 30px;
+  margin: 30px 0;
 }
 
 .dashboard-events-container th {
   width: 25%;
 }
 
-.dashboard-events-container form {
-  display: inline-block;
-}
-
-/* Edit page */
-
-.img-preview {
-  width: 100px;
-  margin-top: 20px;
-}
-
-/* footer */
+/* 🔹 Rodapé */
 footer {
   text-align: center;
-  background-color: #353E48;
-  color: #FFF;
+  background-color: #1E1E1E;
   padding: 30px;
   position: absolute;
   bottom: 0;
   width: 100%;
+  border-top: 2px solid #333;
 }
 
 footer p {
   margin-bottom: 0;
+  font-weight: bold;
 }
+
+/* 🔹 Navbar */
+.navbar {
+  background-color: #000 !important;
+  padding: 10px 20px;
+}
+
+.navbar-nav .nav-link {
+  color: #FFFFFF !important;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #F2A340 !important;
+  transform: scale(1.05);
+}
+
+.navbar-brand img {
+  max-height: 50px;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-color: white;
+}
+

@@ -15,6 +15,9 @@
         <!-- CSS da aplicação -->
         <link rel="stylesheet" href="/css/styles.css">
         <script src="/js/scripts.js"></script>
+        <link rel="icon" href="{{ asset('img/hdcevents_logo.svg') }}" type="image/svg+xml">
+
+
 </head>
     </head>
     <body>
@@ -65,7 +68,7 @@
         </div>
       </main>
       <footer>
-        <p>MPF Eventos &copy; 2020</p>
+        <p>MPF Events &copy; 2025</p>
       </footer>
       <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     </body>
